@@ -1,0 +1,25 @@
+The given code represents a class called `Solution` with a method `removeElement`. This method takes in two parameters: `nums`, which is a list of integers, and `val`, which is an integer. The method aims to remove all occurrences of `val` from the `nums` list and return the new length of the modified list.
+
+Here's a detailed explanation of the code:
+
+1. The method starts by initializing two variables: `i` and `n`. `i` is set to 0, representing the current index of the list being processed, and `n` is set to the length of the `nums` list, representing the initial size of the list.
+
+2. The code enters a `while` loop that continues until the `i` index reaches the end of the list.
+
+3. Inside the loop, the code checks if the value at index `i` in the `nums` list is equal to the target value, `val`.
+
+4. If the condition `nums[i] == val` is `True`, it means the current element is equal to `val`, and it needs to be removed.
+
+5. To remove the element, the code replaces the value at index `i` with the value at the last index of the list (`nums[n - 1]`). This essentially swaps the current element with the last element.
+
+6. After the swap, the code decreases the value of `n` by 1. This effectively reduces the length of the list by 1 since we have swapped the target element to the end.
+
+7. If the condition `nums[i] == val` is `False`, it means the current element is not equal to `val`, and it should be kept in the list.
+
+8. In this case, the code increments the value of `i` by 1 to move to the next element in the list.
+
+9. Once the loop finishes, all occurrences of `val` have been removed from the list, and the final value of `n` represents the new length of the modified list.
+
+10. The method ends by returning the value of `n`, which is the desired result.
+
+Overall, this code efficiently removes all instances of a given value from a list in-place, without requiring additional memory. The time complexity of the algorithm is O(n) since it iterates over the list once, where n is the length of the list.
