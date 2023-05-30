@@ -1,0 +1,29 @@
+Certainly! Let's break down the code step by step:
+
+1. `class Solution:`: This line declares a class named `Solution`. It serves as a container for the `maxProfit` method and any other methods or properties related to solving the problem.
+
+2. `def maxProfit(self, prices):`: This line defines a method named `maxProfit` within the `Solution` class. The method takes two parameters: `self` (which is a reference to the current instance of the class) and `prices`, which represents the array of prices.
+
+3. `i = 0`: This line initializes a variable `i` with a value of 0. It will be used as an index to iterate through the `prices` array.
+
+4. `valley = prices[0]`: This line sets the `valley` variable to the first element in the `prices` array. It represents the lowest point encountered in the prices.
+
+5. `peak = prices[0]`: This line sets the `peak` variable to the first element in the `prices` array. It represents the highest point encountered in the prices.
+
+6. `maxprofit = 0`: This line initializes the `maxprofit` variable with a value of 0. It will be used to store the maximum profit obtained.
+
+7. `while i < len(prices) - 1:`: This line starts a while loop that continues as long as the index `i` is less than `len(prices) - 1`. The loop iterates through the prices array to find valleys and peaks.
+
+8. `while i < len(prices) - 1 and prices[i] >= prices[i + 1]:`: This line starts a nested while loop that finds the next valley. It continues as long as `i` is less than `len(prices) - 1` and the current price (`prices[i]`) is greater than or equal to the next price (`prices[i + 1]`). It increments `i` to move to the next element.
+
+9. `valley = prices[i]`: This line updates the `valley` variable with the current price (`prices[i]`) because it represents the lowest point encountered.
+
+10. `while i < len(prices) - 1 and prices[i] <= prices[i + 1]:`: This line starts another nested while loop that finds the next peak. It continues as long as `i` is less than `len(prices) - 1` and the current price (`prices[i]`) is less than or equal to the next price (`prices[i + 1]`). It increments `i` to move to the next element.
+
+11. `peak = prices[i]`: This line updates the `peak` variable with the current price (`prices[i]`) because it represents the highest point encountered.
+
+12. `maxprofit += peak - valley`: This line calculates the profit obtained from the current valley and peak by subtracting the `valley` price from the `peak` price. It adds this profit to the `maxprofit` variable.
+
+13. `return maxprofit`: This line returns the maximum profit obtained after iterating through the prices array.
+
+In summary, the `maxProfit` method finds the local valleys and peaks in the prices array and calculates the profit obtained by subtracting the valley price from the peak price. It keeps track of the maximum profit seen so far and returns it at the end. The method iterates through the array using the index variable `i` and updates the `valley` and `peak` variables accordingly.
